@@ -1,0 +1,7 @@
+.clear-btn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: .8rem;
+    z-index: 4;
+}

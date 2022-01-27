@@ -1,4 +1,3 @@
-import '../styles/TodoList.css'
 import Card from './Card'
 import AddTodo from './AddTodo';
 import FilterButton from './FilterButton';
@@ -13,7 +12,7 @@ const filterMap = {
 }
 const filterNames = Object.keys(filterMap)
 
-export default function TodoList({  yourName }) {
+export default function TodoList({ yourName }) {
 
     const { todos } = useContext(TodoContext)
     const [filter, setFilter] = useState('Minden')
@@ -29,11 +28,13 @@ export default function TodoList({  yourName }) {
                     setFilter={setFilter}
                 />
             ))}
-            {todos.length > 0 ? <ul>
-                {todos.filter(filterMap[filter]).map(todo => (
-                    <Card key={todo.id} todo={todo}/>
-                ))}
-            </ul> : <h2>Add hozzá az első feladatod!</h2>}
+            {todos.length > 0 ? 
+                <ul>
+                    {todos.filter(filterMap[filter]).map(todo => (
+                        <Card key={todo.id} todo={todo}/>
+                    ))}
+                </ul>
+                    : <h2>Add hozzá az első feladatod!</h2>}
             <AddTodo />
         </div>
     )

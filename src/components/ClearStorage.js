@@ -1,5 +1,3 @@
-import "../styles/ClearStorage.css"
-
 export default function ClearStorage() {
 
     function handleClear() {
@@ -8,6 +6,10 @@ export default function ClearStorage() {
     }
 
     return (
-        <button onClick={handleClear} className="clear-btn" >Localstorage törlése &#10060;</button>
+        <button 
+            onClick={handleClear}
+            className="clear-btn" >
+                Localstorage törlése &#10060;
+        </button>
     )
 }

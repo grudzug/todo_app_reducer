@@ -1,4 +1,3 @@
-import "../styles/Card.css"
 import { useState, useContext } from "react"
 import { useSpring, animated } from 'react-spring'
 import EditButton from "./EditButton"
@@ -21,7 +20,15 @@ export default function Card({ todo }) {
     return (
         <animated.li style={animation}>
             {isEditing ? 
-                <input type="text"  className="edit" onChange={e => dispatch({type: "EDIT_TODO", editedText: e.target.value, id: todo.id})}/> 
+                <input
+                    type="text"
+                    className="edit-input"
+                    onChange={e => dispatch({
+                        type: "EDIT_TODO", 
+                        editedText: e.target.value, 
+                        id: todo.id
+                    })}
+                /> 
                 :  <TodoText todo={todo}/>
             }
             <EditButton isEditing={isEditing} setIsEditing={setIsEditing}/>

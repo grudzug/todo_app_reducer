@@ -1,13 +1,13 @@
-import { useRef } from 'react'
-import '../styles/YourName.css'
+import { useRef, useContext } from 'react'
+import { UserContext } from '../contexts/UserContext';
 
-export default function YourName({ setYourName }) {
+export default function YourName() {
 
     const nameInput = useRef("")
+    const { dispatch } = useContext(UserContext)
 
     function saveYourName() {
-        localStorage.setItem("yourname", JSON.stringify(nameInput.current.value))
-        setYourName(nameInput.current.value)
+        dispatch({ type: "SET_USER", user: nameInput.current.value })
     }
 
     return (

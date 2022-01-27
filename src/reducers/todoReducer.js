@@ -12,17 +12,17 @@ export function todoReducer(state, action) {
             return state.filter(todo => todo.id !== action.id)
         case "EDIT_TODO":
             return state.map(todo => {
-                if (todo.id === action.id) {
-                    todo.text = action.editedText
+                if (todo.id !== action.id) {
+                    return todo
                 }
-                return todo
+                return {...todo, text: action.editedText}
             })
         case "COMPLETE_TODO":
             return state.map(todo => {
-                if (todo.id === action.id) {
-                    todo.completed = action.completed
+                if (todo.id !== action.id) {
+                    return todo
                 }
-                return todo
+                return {...todo, completed: action.completed}
             })
         default:
             return state

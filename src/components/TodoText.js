@@ -8,7 +8,11 @@ export default function TodoText({ todo }) {
 
     function handleChacked(e) {
         setChecked(e.target.checked)
-        dispatch({type:"COMPLETE_TODO", completed: e.target.checked, id: todo.id})
+        dispatch({
+            type:"COMPLETE_TODO", 
+            completed: e.target.checked, 
+            id: todo.id
+        })
     }
     
     return (

@@ -14,16 +14,17 @@ export default function AddTodo() {
 
     return (
         <form onSubmit={handleSubmit}>
-                <div className="input-wrapper">
+                <div className="add-todo">
                     <input 
                         type="text" 
-                        className="new-todo" 
                         value={todo} 
                         onChange={e => setTodo(e.target.value)}
                         placeholder="Feladat hozzáadása"
                         required 
                     />
-                    <button type="submit" className="add">+</button>
+                    <button type="submit" className="add-btn">
+                        +
+                    </button>
                 </div>
             </form>
     )

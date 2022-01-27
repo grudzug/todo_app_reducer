@@ -1,8 +1,26 @@
+/* MINXINS */
+
+@mixin flex-container {
+    display: flex;
+    align-items: center;
+}
+
+/* VARIABLES */
+
+$primary-font: 'Open Sans', sans-serif;
+$primary-color: #008e76;
+$secondary-color: #00bfa5;
+$tertiary-color: #5df2d6;
+
+/* IMPORT FONTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* GLOBALS */
 
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $primary-font
 }
 
 body {
@@ -24,10 +42,10 @@ h2 {
 input, input:focus {
   outline: none;
   border: 0;
-}
 
-input::placeholder {
-  color: rgba(151, 151, 151, 0.479);
+  &::placeholder {
+    color: rgba(151, 151, 151, 0.479);
+  }
 }
 
 button {
@@ -39,30 +57,16 @@ button {
   border-radius: 3px;
   background-color: #fff;
   cursor: pointer;
+
+  &:hover {
+      opacity: .8;
+  }
 }
 
-button:hover {
-  opacity: .8;
-}
+/* IMPORT PARTIALS */
 
-ul {
-  padding: 0;
-  margin: 0;
-  height: auto;
-}
-
-li {
-  padding: 0 10px;
-  margin: 10px 5px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  list-style-type: none;
-  background-color: white;
-}
-
-li button:nth-child(2) {
-  margin-left: auto;
-}
+@import 'add-todo';
+@import "card" ;
+@import "clear-storage" ;
+@import "todo-list" ;
+@import "your-name" ;

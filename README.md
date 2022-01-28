@@ -2,7 +2,7 @@
 
 Building a todo app with contexts and reducers
 
-# Visit live procejt at:
+# Visit live project at:
 
 https://todo-app-reducer-grudzug.web.app/
 

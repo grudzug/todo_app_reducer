@@ -6,16 +6,16 @@ import { TodoContext } from '../contexts/TodoContext';
 
 // setting up filtering logic
 const filterMap = {
-    Minden: () => true,
-    Hátralévő: todo => !todo.completed,
-    Elkészült: todo => todo.completed
+    All: () => true,
+    Uncompleted: todo => !todo.completed,
+    Completed: todo => todo.completed
 }
 const filterNames = Object.keys(filterMap)
 
 export default function TodoList({ yourName }) {
 
     const { todos } = useContext(TodoContext)
-    const [filter, setFilter] = useState('Minden')
+    const [filter, setFilter] = useState('All')
 
     return (
         <div className="todo-list">
@@ -34,7 +34,7 @@ export default function TodoList({ yourName }) {
                         <Card key={todo.id} todo={todo}/>
                     ))}
                 </ul>
-                    : <h2>Add hozzá az első feladatod!</h2>}
+                    : <h2>Add your first todo!</h2>}
             <AddTodo />
         </div>
     )

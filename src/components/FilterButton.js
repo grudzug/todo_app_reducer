@@ -5,7 +5,7 @@ export default function FilterButton( {name, setFilter, isActive} ) {
         style={isActive ? {background: "#00bfa5"} : {background: "#fff"}}
         onClick={() => setFilter(name)}
       >
-        <span>{name} feladat</span>
+        <span>{name}</span>
       </button>
     );
   }

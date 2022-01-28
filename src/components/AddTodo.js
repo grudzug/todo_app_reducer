@@ -1,5 +1,5 @@
-import { TodoContext } from '../contexts/TodoContext';
-import { useContext, useState } from 'react';
+import { TodoContext } from '../contexts/TodoContext'
+import { useContext, useState } from 'react'
 
 export default function AddTodo() {
     
@@ -19,7 +19,7 @@ export default function AddTodo() {
                         type="text" 
                         value={todo} 
                         onChange={e => setTodo(e.target.value)}
-                        placeholder="Feladat hozzáadása"
+                        placeholder="Add todo"
                         required 
                     />
                     <button type="submit" className="add-btn">

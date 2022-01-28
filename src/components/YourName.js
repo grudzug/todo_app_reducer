@@ -1,5 +1,5 @@
 import { useRef, useContext } from 'react'
-import { UserContext } from '../contexts/UserContext';
+import { UserContext } from '../contexts/UserContext'
 
 export default function YourName() {
 
@@ -13,10 +13,10 @@ export default function YourName() {
     return (
         <>        
             <div className="your-name">
-                <p>Nevem:</p>
+                <p>Name:</p>
                 <form onSubmit={saveYourName}>
-                    <input type="text" ref={nameInput} required placeholder="Írd ide a neved"/>
-                    <button type="submit">Mentés</button>
+                    <input type="text" ref={nameInput} required placeholder="Your name goes here..."/>
+                    <button type="submit">Save</button>
                 </form>
             </div>
         </>

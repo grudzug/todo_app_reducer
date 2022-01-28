@@ -2,14 +2,14 @@ export default function ClearStorage() {
 
     function handleClear() {
         localStorage.clear()
-        alert("LocalStorage törölve, kérlek frissíts")
+        alert("LocalStorage cleared, please refresh")
     }
 
     return (
         <button 
             onClick={handleClear}
             className="clear-btn" >
-                Localstorage törlése &#10060;
+                clear localstorage &#10060;
         </button>
     )
 }

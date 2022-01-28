@@ -19,7 +19,7 @@ export default function TodoList({ yourName }) {
 
     return (
         <div className="todo-list">
-            <h2>Szia {yourName}! &#9996;</h2>
+            <h2>Hi {yourName}! &#9996;</h2>
             {filterNames.map(name => (
                 <FilterButton
                     key={name}

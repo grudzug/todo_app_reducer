@@ -1,3 +1,11 @@
+#Goal
+
+Building a todo app with contexts and reducers
+
+# Visit live procejt at:
+
+https://todo-app-reducer-grudzug.web.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
